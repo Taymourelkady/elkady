@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Stylised "E": three clean data rows; the middle row ends in an agent node -->
+  <rect width="40" height="40" rx="10" fill="#111214"/>
+  <rect x="9" y="10" width="22" height="4.5" rx="2.25" fill="#FAFAF7"/>
+  <rect x="9" y="17.75" width="12" height="4.5" rx="2.25" fill="#FAFAF7"/>
+  <circle cx="27" cy="20" r="3.75" fill="#3D5AFE"/>
+  <rect x="9" y="25.5" width="22" height="4.5" rx="2.25" fill="#FAFAF7"/>
+</svg>

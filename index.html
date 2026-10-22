@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elkady — AI Data Consultancy</title>
+  <meta name="description" content="elkady cleans your data and builds AI agents that put it to work.">
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF7;
+      --ink: #111214;
+      --muted: #5C5F66;
+      --line: #E4E4DF;
+      --accent: #3D5AFE;
+      --tile: #111214;
+      --tile-ink: #FAFAF7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0E0F11;
+        --ink: #F2F2EE;
+        --muted: #9A9DA4;
+        --line: #24262A;
+        --accent: #6B83FF;
+        --tile: #F2F2EE;
+        --tile-ink: #0E0F11;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 17px/1.6 Inter, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { padding: 0 clamp(24px, 5vw, 80px); }
+    h1, h2, h3, .wordmark { font-family: "Space Grotesk", Inter, sans-serif; letter-spacing: -0.02em; }
+    a { color: inherit; }
+
+    /* Nav */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .wordmark { font-size: 24px; font-weight: 600; }
+    .mark .tile { fill: var(--tile); }
+    .mark .row { fill: var(--tile-ink); }
+    .mark .node { fill: var(--accent); }
+
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 999px;
+      background: var(--ink); color: var(--bg); text-decoration: none;
+      font-weight: 500; font-size: 15px; transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+
+    /* Hero */
+    .hero { padding: 96px 0 112px; }
+    .eyebrow { color: var(--accent); font-weight: 500; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-size: clamp(44px, 7vw, 120px); line-height: 1.02; font-weight: 600; margin: 18px 0 24px; }
+    h1 span { color: var(--muted); }
+    .lede { font-size: 20px; color: var(--muted); max-width: 640px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+
+    /* Services */
+    .services { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .service { padding: 48px 48px 56px 0; }
+    .service + .service { padding: 48px 0 56px 48px; border-left: 1px solid var(--line); }
+    .num { font-family: "Space Grotesk", sans-serif; color: var(--accent); font-size: 15px; }
+    h2 { font-size: 30px; font-weight: 600; margin: 10px 0 12px; }
+    .service p { color: var(--muted); max-width: 420px; }
+    .service ul { list-style: none; padding: 0; margin-top: 20px; }
+    .service li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
+
+    /* CTA + footer */
+    .cta { border-top: 1px solid var(--line); padding: 88px 0; text-align: center; }
+    .cta h2 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 28px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    @media (max-width: 720px) {
+      .wrap { padding: 0 16px; }
+      .hero { padding: 56px 0 72px; }
+      .services { grid-template-columns: 1fr; }
+      .service, .service + .service { padding: 40px 0; border-left: 0; }
+      .service + .service { border-top: 1px solid var(--line); }
+      nav .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#" aria-label="elkady home">
+        <svg class="mark" width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+          <rect class="tile" width="40" height="40" rx="10"/>
+          <rect class="row" x="9" y="10" width="22" height="4.5" rx="2.25"/>
+          <rect class="row" x="9" y="17.75" width="12" height="4.5" rx="2.25"/>
+          <circle class="node" cx="27" cy="20" r="3.75"/>
+          <rect class="row" x="9" y="25.5" width="22" height="4.5" rx="2.25"/>
+        </svg>
+        <span class="wordmark">elkady</span>
+      </a>
+      <a class="btn ghost" href="mailto:hello@elkady.com">Get in touch</a>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">AI Data Consultancy</p>
+      <h1>Clean data.<br><span>Agents that use it.</span></h1>
+      <p class="lede">We turn messy, scattered data into a reliable foundation — then build AI agents that put it to work for your team.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:hello@elkady.com">Book a call</a>
+        <a class="btn ghost" href="#services">What we do</a>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="service">
+        <span class="num">01</span>
+        <h2>Data cleaning</h2>
+        <p>We audit, deduplicate, standardise and structure your data so every system — and every model — can trust it.</p>
+        <ul>
+          <li>Data audits &amp; quality scoring</li>
+          <li>Deduplication &amp; normalisation</li>
+          <li>Pipelines that keep it clean</li>
+        </ul>
+      </div>
+      <div class="service">
+        <span class="num">02</span>
+        <h2>AI agents</h2>
+        <p>We design and ship agents that work on top of your data — answering questions, automating workflows and taking action.</p>
+        <ul>
+          <li>Custom agents for your workflows</li>
+          <li>Integrations with your existing tools</li>
+          <li>Evaluation, monitoring &amp; iteration</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Let's get your data working.</h2>
+      <a class="btn" href="mailto:hello@elkady.com">hello@elkady.com</a>
+    </section>
+
+    <footer>
+      <span>© 2026 elkady</span>
+      <span>AI data consultancy</span>
+    </footer>
+  </div>
+</body>
+</html>
